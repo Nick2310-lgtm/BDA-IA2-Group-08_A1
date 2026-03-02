@@ -1,30 +1,18 @@
 # Secure Data Orchestration for Patient Monitoring – Case Study Implementation
 
-## Overview
+This repository implements the experimental evaluation of the Secure Data Orchestration framework using ICU monitoring data from the MIMIC-III Clinical Database Demo (v1.4).
 
-This repository implements the experimental evaluation described in Section 5 of the case study using the MIMIC-III Clinical Database Demo (v1.4).
+The implementation performs:
 
-## Dataset
+- Extraction and aggregation of vital signs from CHARTEVENTS  
+- Mean imputation for incomplete attributes  
+- Binary risk classification using Logistic Regression  
+- Execution time measurement  
+- K-Means clustering (k = 3) for patient stratification  
+- Performance visualization  
 
-Download the MIMIC-III Clinical Database Demo from PhysioNet: https://physionet.org/content/mimiciii-demo/1.4/
+## Setup
 
-After downloading:
-
-1. Extract the ZIP file.
-2. Place `CHARTEVENTS.csv` in the same directory as the notebook.
-
-The dataset is not included due to licensing restrictions.
-
-## Workflow
-
-1. Vital sign extraction from CHARTEVENTS
-2. Mean aggregation per patient
-3. Mean imputation
-4. Binary risk classification (Logistic Regression)
-5. Execution time measurement
-6. K-Means clustering (k=3)
-7. Performance visualization
-
-## Execution
-
-Install dependencies: pip install -r requirements.txt
+1. Download the MIMIC-III Clinical Database Demo (v1.4).
+2. Place `CHARTEVENTS.csv` in the project directory.
+3. Install dependencies: pip install -r requirements.txt
